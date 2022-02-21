@@ -15,18 +15,18 @@ export default function Navbar(props) {
                         <li className="nav-item">
                             <a className="nav-a active" aria-current="page" href="/">Home</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-a active" aria-current="page" href="/about">{props.aboutText}</a>
-                        </li>
+                        {/* <li className="nav-item">
+                            <a className="nav-a active mx-3" aria-current="page" href="#">{props.aboutText}</a>
+                        </li> */}
                     </ul>
-                   <div className="d-flex">
+                   <div className="d-flex" style={{marginLeft: '1020px'}}>
                        <div className="bg-primary rounded mx-2" style={{height: '25px', width:'25px', cursor:'pointer'}} onClick={()=>{props.colorChange('primary')}}></div>
                        <div className="bg-danger rounded mx-2" style={{height: '25px', width:'25px', cursor:'pointer'}} onClick={()=>{props.colorChange('danger')}}></div>
                        <div className="bg-success rounded mx-2" style={{height: '25px', width:'25px', cursor:'pointer'}} onClick={()=>{props.colorChange('success')}}></div>
                        <div className="bg-warning rounded mx-2" style={{height: '25px', width:'25px', cursor:'pointer'}} onClick={()=>{props.colorChange('warning')}}></div>
                    </div>
                 <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
-                <input className="form-check-input" onClick={props.hrefggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                 <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.text}</label>
                 </div>
                 </div>

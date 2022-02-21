@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import About from './components/About';
+// import About from './components/About';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
 // import {
@@ -12,7 +12,7 @@ import Alert from './components/Alert';
 
 function App() {
   const [mode, setMode] = useState('light'); //whether dark mode is enabled or not
-  const [text, setText] = useState('Enable lightMode');
+  const [text, setText] = useState('Enable DarkMode');
   const [alert, setAlert] = useState(null);
   const [button,setBtn] = useState(
     {
@@ -102,7 +102,7 @@ function App() {
             <TextForm heading="Word Counter, Character Counter, Convert text Upperacse to Loweracse , Loweracse to Uppercase and Copy the Text" mode={mode} showAlert={showAlert} button={button} />
             {/* }/> */}
             {/* <Route exact path="/about" element={ */}
-            <About mode={mode} />
+            {/* <About mode={mode} /> */}
             {/* }/> */}
           {/* </Routes> */}
         </div>
